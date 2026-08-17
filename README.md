@@ -113,10 +113,7 @@ TensorRT バックエンドは `TensorrtExecutionProvider` が使える環境で
 | --- | --- |
 | `yolov8n_face.onnx` (12 MB) | YOLOv8-Face、WIDER FACE Easy 94.6% / Medium 92.3% / Hard 79.6% |
 | `face_landmarker.onnx` (4.6 MB) | MediaPipe FaceMesh V2_478（Google の `face_landmarker.task` 由来） |
-| `face_mesh.onnx` (2.4 MB) | MediaPipe FaceMesh V1_468（`MESH_V1_468` 指定時のみ使用） |
 
-`src/facemesh_tracking/assets/tessellation.json` は MediaPipe FaceMesh のエッジ定義
-（[PINTO0309/facemesh_onnx_tensorrt](https://github.com/PINTO0309/facemesh_onnx_tensorrt) 由来、Apache-2.0）。
 再生成は `python tools/extract_tessellation.py`。478点モデルでは先頭 468 点に適用され、虹彩は点で描かれる。
 
 ## テスト
